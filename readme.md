@@ -112,7 +112,17 @@ set up django project
                         ]
             terminal>python manage.py makemigrations
             terminal>python manage.py migrate
-
+For Mongo Db
+        terminal >pip install djongo
+        setting
+        DATABASES = {
+            'default': {
+                'ENGINE': 'djongo',
+                'NAME': 'demo',
+            }
+        }
+        terminal>python manage.py makemigrations
+        terminal>python manage.py migrate
 Architecture of Django
     Django is based on MVT (Model-View-Template) architecture. MVT is a software design pattern for developing a web application. 
     Model: The model is going to act as the interface of your data. It is responsible for maintaining data. It is the logical data structure behind the entire application and is represented by a database (generally relational databases such as MySql, Postgres). To check more, visit – Django Models 

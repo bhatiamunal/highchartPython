@@ -28,7 +28,11 @@ def database(req):
         database.save()
         print(messages)
         messages.success(req,'Profile updated')
-
+    context["data"] = "hello"
+    context["data_all"] = Dashboard.objects.all()
+    print(context["data_all"])
+    # data = Posts.objects.all()
+    # print(data)
     return render(req,'database.html',context)
     #return HttpResponse("this is database page")
 def table(req):
